@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <ImageView
+            android:id="@+id/imgAnhTruyen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dragonball">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txvTenChap"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D5978B8B"
+            android:gravity="center"
+            android:text="So Chap"
+            android:textColor="@color/white"
+            android:textSize="18sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txvTenTruyen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Ten Truyen Tranh"
+        android:textColor="@color/black"
+        android:textSize="18sp">
+
+    </TextView>
+
+</LinearLayout>

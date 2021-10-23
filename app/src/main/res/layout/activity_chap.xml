@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_edttentruyen"
+    tools:context=".ChapActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:padding="2dp">
+
+        <ImageView
+            android:background="@drawable/bg_edtanhtruyen"
+            android:padding="4dp"
+            android:id="@+id/imgAnhChapTruyen"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dragonball">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txvTenChapTruyen"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/imgAnhChapTruyen"
+            android:gravity="center"
+            android:text="Ten Truyen"
+            android:textColor="@color/black"
+            android:textSize="21sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:background="@drawable/bg_edttentruyen"
+        android:id="@+id/lsvDanhSachChapTruyen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+</LinearLayout>
