@@ -26,6 +26,7 @@ import java.util.ArrayList;
 
 public class ChapActivity extends AppCompatActivity implements LayChapVe {
     TextView txvTenChapTruyen;
+    TextView txvTheLoaiTruyen;
     ImageView imgAnhChapTruyen;
     TruyenTranh truyenTranh;
     ListView lsvDanhSachChapTruyen;
@@ -60,6 +61,7 @@ public class ChapActivity extends AppCompatActivity implements LayChapVe {
 
     private void anhXa() {
         txvTenChapTruyen = findViewById(R.id.txvTenChapTruyen);
+        txvTheLoaiTruyen = findViewById(R.id.txvTheLoaiTruyen);
         imgAnhChapTruyen = findViewById(R.id.imgAnhChapTruyen);
 
         lsvDanhSachChapTruyen = findViewById(R.id.lsvDanhSachChapTruyen);
@@ -68,6 +70,7 @@ public class ChapActivity extends AppCompatActivity implements LayChapVe {
 
     private void setUp() {
         txvTenChapTruyen.setText(truyenTranh.getTenTruyen());
+        txvTheLoaiTruyen.setText(truyenTranh.getTheLoaiTruyen());
         Glide.with(this).load(truyenTranh.getLinkAnh()).into(imgAnhChapTruyen);
 
 //        lsvDanhSachChapTruyen.setAdapter(chapTruyenAdapter);

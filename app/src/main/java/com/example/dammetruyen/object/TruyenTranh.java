@@ -9,22 +9,26 @@ public class TruyenTranh implements Serializable {
     private String tenTruyen;
     private String tenChap;
     private String linkAnh;
+    private String theLoaiTruyen;
     private String id;
 
-    public TruyenTranh(String tenTruyen, String tenChap, String linkAnh) {
+    public TruyenTranh(String tenTruyen, String tenChap, String linkAnh, String theLoaiTruyen) {
         this.tenTruyen = tenTruyen;
         this.tenChap = tenChap;
         this.linkAnh = linkAnh;
+        this.theLoaiTruyen = theLoaiTruyen;
     }
 
     public TruyenTranh() {
     }
+
     /*
     {
     "id":""
     "tenTruyen":""
     "tenChap":""
     "linkAnh":""
+    "theLoai":""
     }
     */
 
@@ -33,7 +37,16 @@ public class TruyenTranh implements Serializable {
         tenTruyen = o.getString("tenTruyen");
         tenChap = o.getString("tenChap");
         linkAnh = o.getString("linkAnh");
+        theLoaiTruyen = o.getString("theLoai");
 
+    }
+
+    public String getTheLoaiTruyen() {
+        return theLoaiTruyen;
+    }
+
+    public void setTheLoaiTruyen(String theLoaiTruyen) {
+        this.theLoaiTruyen = theLoaiTruyen;
     }
 
     public String getTenTruyen() {

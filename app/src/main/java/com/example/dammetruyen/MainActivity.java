@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity implements LayTruyenVe {
             truyenTranhArrayList.clear();
             JSONArray array = new JSONArray(data);
             for (int i = 0; i < array.length(); i++) {
-                JSONObject o = array.getJSONObject(i);
-                truyenTranhArrayList.add(new TruyenTranh(o));
+                TruyenTranh truyenTranh = new TruyenTranh(array.getJSONObject(i));
+                truyenTranhArrayList.add(truyenTranh);
             }
             adapter = new TruyenTranhAdapter(this, 0, truyenTranhArrayList);
             gdvDanhSachTruyen.setAdapter(adapter);
