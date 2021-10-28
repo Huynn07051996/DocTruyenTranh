@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
+
 import com.example.dammetruyen.adapter.RecyclerAdapter;
 import com.example.dammetruyen.api.ApiLayAnhChapVe;
 import com.example.dammetruyen.interfaces.LayAnhVe;
@@ -24,7 +24,7 @@ public class DocTruyenActivity extends AppCompatActivity implements LayAnhVe {
     RecyclerView lsvDanhSachAnh;
     ArrayList<String> arrUrlAnh;
     String idChap;
-    int position;
+    int position, soChap, soChapDangDoc;
     ArrayList<ChapTruyen> arrChap;
 
     @Override
@@ -63,14 +63,16 @@ public class DocTruyenActivity extends AppCompatActivity implements LayAnhVe {
     }
 
     public void left(View view) {
-        if (position == 0) position = arrChap.size();
-        else position -= 1;
+        if (position <= 0) {
+            position = 0;
+        } else position -= 1;
         getData(arrChap.get(position).getId());
     }
 
     public void right(View view) {
-        if(position == arrChap.size()) position = 0;
-        else position +=1;
+        if (position >= arrChap.size()-1) {
+            position = arrChap.size()-1;
+        } else position += 1;
         getData(arrChap.get(position).getId());
     }
 
@@ -110,6 +112,8 @@ public class DocTruyenActivity extends AppCompatActivity implements LayAnhVe {
         lsvDanhSachAnh.setLayoutManager(new LinearLayoutManager(this));
         // That's all!
     }
+
+
 
 
 }
