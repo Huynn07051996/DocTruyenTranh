@@ -24,7 +24,7 @@ public class DocTruyenActivity extends AppCompatActivity implements LayAnhVe {
     RecyclerView lsvDanhSachAnh;
     ArrayList<String> arrUrlAnh;
     String idChap;
-    int position, soChap, soChapDangDoc;
+    int position;
     ArrayList<ChapTruyen> arrChap;
 
     @Override
